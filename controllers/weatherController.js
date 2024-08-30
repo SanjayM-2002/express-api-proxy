@@ -1,5 +1,22 @@
 const axios = require('axios');
 
+const getIPv4Address = (ip) => {
+  if (ip === '::1') {
+    return '127.0.0.1';
+  }
+
+  if (ip.includes(':')) {
+    return ip.split(':').pop();
+  }
+
+  return ip;
+};
+
+const ping = async (req, res) => {
+  const ipAddress = getIPv4Address(req.ip);
+  res.status(200).json({ success: 'true', message: 'pong', ip: ipAddress });
+};
+
 const getWeatherData = async (req, res) => {
   const API_URL = process.env.API_URL;
   console.log('api url is: ', API_URL);
@@ -27,4 +44,5 @@ const getWeatherData = async (req, res) => {
 
 module.exports = {
   getWeatherData,
+  ping,
 };
