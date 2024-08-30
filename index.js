@@ -2,7 +2,6 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const axios = require('axios');
-const morgan = require('morgan');
 const weatherRoutes = require('./routes/weatherRoutes');
 dotenv.config();
 const app = express();
