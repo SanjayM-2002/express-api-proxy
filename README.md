@@ -54,6 +54,10 @@ npm run dev
 
 [Video Link](https://www.loom.com/share/d31b5a8b0b0b45d6b06f054f56dcb833?sid=85a65e50-0089-460e-a750-cf1e046e3f83)
 
+## Architecture
+
+![Architecture](assets/express_api_proxy.png)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
